@@ -1,0 +1,152 @@
+/* CSS Variables for Light Theme (Default) */
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --focus-ring: #3b82f6;
+    --btn-bg: #e2e8f0;
+    --btn-hover: #cbd5e1;
+    --btn-text: #1e293b;
+    --clear-bg: #ef4444;
+    --clear-hover: #dc2626;
+    --clear-text: #ffffff;
+}
+
+/* Dark Theme Variables */
+body.dark {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --focus-ring: #60a5fa;
+    --btn-bg: #334155;
+    --btn-hover: #475569;
+    --btn-text: #f1f5f9;
+    --clear-bg: #dc2626;
+    --clear-hover: #b91c1c;
+    --clear-text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    height: 140px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 0.75rem;
+}
+
+textarea:focus {
+    border-color: var(--focus-ring);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.counter-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+/* Required Warning and Over Classes */
+.warning {
+    color: #f97316 !important; /* Orange text */
+}
+
+.over {
+    color: #ef4444 !important; /* Red and bold */
+    font-weight: bold !important;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#theme-toggle {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+#theme-toggle:hover {
+    background-color: var(--btn-hover);
+}
+
+#clear-btn {
+    background-color: var(--clear-bg);
+    color: var(--clear-text);
+}
+
+#clear-btn:hover {
+    background-color: var(--clear-hover);
+}
